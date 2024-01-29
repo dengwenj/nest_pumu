@@ -3,10 +3,11 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
+  // 依赖注入
   constructor(private readonly appService: AppService) {}
 
   @Get('/hh')
   getHello(): string {
-    return this.appService.getHello();
+    return this.appService.getHello()
   }
 }
