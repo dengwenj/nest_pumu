@@ -4,10 +4,12 @@ import { AppService } from './app.service';
 import { PumuController } from './pumu/pumu.controller';;
 import { UserModule } from './user/user.module';
 import { AppService2 } from './app.service2';
+import { ListModule } from './list/list.module';
+import { ConfModule } from './conf/conf.module';
 
 // IOC 控制反转
 @Module({
-  imports: [UserModule],
+  imports: [UserModule, ListModule, ConfModule.urlRoot('/pumu')],
   // controller 这里面主要是配置路由的
   controllers: [AppController, PumuController],
   // service 写业务逻辑的

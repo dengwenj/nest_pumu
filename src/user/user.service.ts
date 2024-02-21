@@ -9,7 +9,7 @@ export class UserService {
   }
 
   findAll() {
-    return `This action returns all user`;
+    return `我是 user 的共享模块`;
   }
 
   findOne(id: number) {
